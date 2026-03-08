@@ -1,0 +1,50 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; color: white; overflow: hidden; height: 100vh; width: 100vw; background: black; }
+
+#bg-video { position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -2; object-fit: cover; }
+.video-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: -1; }
+
+.content-wrapper { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+nav { position: absolute; top: 0; width: 100%; padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; letter-spacing: 2px; }
+
+.hero-text .main-title { font-family: 'Oswald', sans-serif; font-size: 5rem; line-height: 1.1; text-transform: uppercase; }
+.highlight { color: #ff3333; text-shadow: 0 0 20px rgba(255, 51, 51, 0.8); }
+
+.neon-btn { padding: 15px 40px; border: 2px solid #ff3333; background: transparent; color: white; cursor: pointer; transition: 0.3s; font-weight: bold; }
+.neon-btn:hover { background: #ff3333; box-shadow: 0 0 20px #ff3333; transform: translateY(-3px); }
+
+/* MODAL STYLES */
+.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+.modal-content { background: #111; padding: 30px; border: 1px solid #ff3333; border-radius: 10px; width: 350px; }
+.modal-content input { width: 100%; padding: 10px; margin: 10px 0; background: #222; border: 1px solid #444; color: white; }
+.close-btn { background: none; border: none; color: #888; cursor: pointer; margin-top: 10px; text-decoration: underline; }
+
+/* WELCOME ANIMATION */
+#welcome-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: black; z-index: 9999; display: flex; justify-content: center; align-items: center; animation: fadeOut 1.5s forwards 1.5s; }
+@keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    object-fit: cover; /* This crops the video to fill the screen perfectly */
+}
+body {
+    background-color: #000; /* Keeps the screen black while video loads */
+    margin: 0;
+    padding: 0;
+}
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust 0.5 to 0.7 if you want it darker */
+    z-index: -1; /* Sits between the video and your text */
+}

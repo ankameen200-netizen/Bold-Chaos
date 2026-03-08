@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeoss | Premium Wear • Bold Chaos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <div id="welcome-overlay">
+        <div class="loader-text">ZEOSS</div>
+    </div> 
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://videos.pexels.com/video-files/5309381/5309381-uhd_2560_1440_25fps.mp4" type="video/mp4">
+    </video> 
+    <div class="video-overlay"></div> 
+
+    <div class="content-wrapper">
+        <nav>
+            <div class="logo">ZEOSS</div>
+            <div class="menu-links">
+                <a href="#">New Arrivals</a>
+                <a href="#">Collection</a>
+                <a href="#">About</a>
+            </div>
+        </nav> 
+
+        <div class="hero-text">
+            <h1 class="main-title">PREMIUM WEAR <br> <span class="highlight">BOLD CHAOS</span></h1>
+            <p class="sub-title">Redefining street fashion with raw energy.</p>
+            <div class="button-group">
+                <button class="neon-btn" onclick="openOrderModal()">Order Now</button>
+                <button class="neon-btn secondary">Discover Now</button>
+            </div>
+        </div>
+    </div> 
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Place Your Order</h2>
+            <form id="order-form">
+                <input type="text" id="cust-name" placeholder="Your Name" required>
+                <input type="text" id="cust-item" placeholder="Product Name" required>
+                <input type="text" id="cust-address" placeholder="Shipping Address" required>
+                <button type="submit" class="neon-btn">Confirm Order</button>
+                <button type="button" class="close-btn" onclick="closeOrderModal()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<video autoplay muted loop playsinline id="bg-video">
+    <source src="promo.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+    <script src="script.js"></script>
+</body>
+</html>
